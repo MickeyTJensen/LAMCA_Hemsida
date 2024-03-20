@@ -30,7 +30,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #9CD02F;
+  background: #f09401;
 }
 
 body {
@@ -62,7 +62,7 @@ section {
 
 .heading span {
   font-size: 3rem;
-  color: #9CD02F;
+  color: #f09401;
   background: #000;
   padding: .5rem 1.5rem;
   border: 0.1rem solid #aaa;
@@ -74,7 +74,7 @@ section {
   display: inline-block;
   padding: 1rem 2.8rem;
   padding-right: 3rem;
-  background: linear-gradient(130deg, #9CD02F 93%, transparent 90%);
+  background: linear-gradient(130deg, #f09401 93%, transparent 90%);
   color: #fff;
   cursor: pointer;
   font-size: 1.7rem;
@@ -125,7 +125,29 @@ section {
   background: #f09401;
 }
 
-.centered-text {
+.content-flex {
+  display: flex;
+  justify-content: flex-start; /* Logotypen kommer att vara till höger */
+  align-items: center; /* Centrerar innehållet vertikalt */
+  height: 100vh; /* Alternativt, justera höjden enligt behov */
+  padding-top: 100px; /* Justera enligt behov för att inte döljas av headern */
+  color: white;
+  font-size: large; /* xx-large kan vara för stort beroende på din design */
+}
+
+.text-content {
+  text-align: left; /* Ser till att texten inuti är vänsterjusterad */
+  margin-left: 20px; /* Lägger till lite utrymme mellan bilden och texten */
+}
+
+.logo-img {
+  width: 40%; /* Justera storleken på logotypen enligt behov */
+  max-height: auto;
+  object-fit: contain;
+}
+
+
+.head-text {
   display: flex;
   justify-content: center;
   align-items: center;
