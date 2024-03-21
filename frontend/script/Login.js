@@ -13,3 +13,13 @@ document.getElementById('toggleForm').addEventListener('click', function() {
         toggleBtn.textContent = "Switch to Login";
     }
 });
+
+document.getElementById('toggleToLogin').addEventListener('click', function() {
+    document.getElementById('signupForm').style.display = 'none';
+    document.getElementById('loginForm').style.display = 'block';
+});
+
+document.getElementById('toggleToSignup').addEventListener('click', function() {
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('signupForm').style.display = 'block';
+});

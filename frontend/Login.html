@@ -15,7 +15,9 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: #000;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/frontend/images/bgd_logo_signup.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         input, button {
@@ -56,40 +58,42 @@
 
     </header>
 
+    
+
+<div class="form-wrapper">
 <!-- Signup Form -->
-<div id="signupForm">
-    <h2 style="color: white;">Signup</h2>
-    <input type="text" placeholder="Name" style="color: black;">
-    <input type="email" placeholder="Email" style="color: black;">
-    <input type="password" placeholder="Password" style="color: black;">
-    <button>Signup</button>
-</div>
+    <div id="signupForm">
+        <div id="signupTitle">
+            <h2>Register</h2>
+        </div>
+        <input type="text" placeholder="Name" style="color: black;">
+        <input type="email" placeholder="Email" style="color: black;">
+        <input type="password" placeholder="Password" style="color: black;">
+        <div><button>Register</button></div>
+        <p>Already a member? <span id="toggleToLogin" style="color: #f09401; cursor: pointer;">Log in</span></p>
+    </div>
 
 <!-- Login Form -->
-<div id="loginForm" style="display:none;">
-    <h2 style="color: white;">Login</h2>
-    <input type="email" placeholder="Email" style="color: black;">
-    <input type="password" placeholder="Password" style="color: black;">
-    <button>Login</button>
+    <div id="loginForm" style="display:none;">
+        <div id="signupTitle">
+            <h2>Log In</h2>
+        </div>
+        <input type="email" placeholder="Email" style="color: black;">
+        <input type="password" placeholder="Password" style="color: black;">
+        <div><button>Log In</button></div>
+        <p>Not a member? <span id="toggleToSignup" style="color: #f09401; cursor: pointer;">create account</span></p>
+    </div>
 </div>
 
-<button id="toggleForm">Switch to Login</button>
-
 <script>
-    document.getElementById('toggleForm').addEventListener('click', function() {
-        let loginForm = document.getElementById('loginForm');
-        let signupForm = document.getElementById('signupForm');
-        let toggleBtn = document.getElementById('toggleForm');
-
-        if (signupForm.style.display === "none") {
-            signupForm.style.display = "block";
-            loginForm.style.display = "none";
-            toggleBtn.textContent = "Switch to Login";
-        } else {
-            signupForm.style.display = "none";
-            loginForm.style.display = "block";
-            toggleBtn.textContent = "Switch to Signup";
-        }
+    document.getElementById('toggleToLogin').addEventListener('click', function() {
+        document.getElementById('signupForm').style.display = 'none';
+        document.getElementById('loginForm').style.display = 'block';
+    });
+    
+    document.getElementById('toggleToSignup').addEventListener('click', function() {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('signupForm').style.display = 'block';
     });
 </script>
 

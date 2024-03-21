@@ -38,7 +38,7 @@ body {
 }
 
 section {
-  padding: 5rem 9%;
+  padding: 10%;
 }
 
 .heading {
@@ -129,8 +129,9 @@ section {
   display: flex;
   justify-content: flex-start; /* Logotypen kommer att vara till höger */
   align-items: center; /* Centrerar innehållet vertikalt */
-  height: 100vh; /* Alternativt, justera höjden enligt behov */
+  height: 70vh; /* Alternativt, justera höjden enligt behov */
   padding-top: 100px; /* Justera enligt behov för att inte döljas av headern */
+  padding-bottom: 50px;
   color: white;
   font-size: large; /* xx-large kan vara för stort beroende på din design */
 }
@@ -138,6 +139,21 @@ section {
 .text-content {
   text-align: left; /* Ser till att texten inuti är vänsterjusterad */
   margin-left: 20px; /* Lägger till lite utrymme mellan bilden och texten */
+  margin-right: 20px;
+}
+
+.text-content h2{
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 48px;
+}
+
+.text-content p{
+  padding-bottom: 20px;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 24px;
 }
 
 .logo-img {
@@ -146,14 +162,85 @@ section {
   object-fit: contain;
 }
 
+.who-are-we-img {
+  width: 60%; /* Justera storleken på logotypen enligt behov */
+  max-height: auto;
+  object-fit: contain;
+}
 
-.head-text {
+.member-img {
+   /* Justera storleken på logotypen enligt behov */
+  height: 120%;
+  max-height: auto;
+  object-fit: contain;
+  margin-right: 20%;
+}
+
+.trainer-img{
+  width: 40%; /* Justera storleken på logotypen enligt behov */
+  max-height: auto;
+  object-fit: contain;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  height: 100vh; /* Använder hela vyhöjden för att centrera innehållet vertikalt */
-  padding-top: 100px; /* Lägg till toppmarginal om headern döljer innehållet */
-  color: white; /* Vit textfärg */
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 5%;
+  z-index: 10000;
+  background: #303030;
+  height: 150px;
+}
+
+.footer .logo {
+  font-weight: bolder;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.footer .logo span {
+  color: #f09401;
+}
+
+.footer .navbar a {
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+.footer .navbar a:hover {
+  background: #f09401;
+}
+
+.footer p{
+  text-align: left;
+  color: #fff;
+}
+
+.footer h2{
   text-align: center;
-  font-size: xx-large;
+  color: #f09401;
+  margin-top: auto;
+}
+
+.hours-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1px;
+}
+
+.location-grid{
+  text-align: center;
+  display: grid;
 }
