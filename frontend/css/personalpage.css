@@ -1,0 +1,20 @@
+
+
+/* Exempel på mediefrågor */
+@media (min-width: 2560px) { /* För 4K skärmar */
+  .calendar-container {
+    max-width: 2400px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) { /* För 2K skärmar */
+  .calendar-container {
+    max-width: 1800px;
+  }
+}
+
+@media (max-width: 1024px) { /* För mindre skärmar */
+  .calendar-container {
+    max-width: 100%;
+  }
+}
