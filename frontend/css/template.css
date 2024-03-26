@@ -199,7 +199,7 @@ section {
   padding: 5px 5% 0;
   z-index: 10000;
   background: #303030;
-  height: 130px;
+  height: 110px;
 }
 
 .footer .logo {
@@ -238,8 +238,8 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Delar upp i två kolumner */
   grid-template-rows: auto; /* Rader baserat på innehållets storlek */
-  grid-gap: 5px; /* Utrymme mellan grid-element */
-  text-align: left; /* Centrerar texten */
+  grid-gap: 1px; /* Utrymme mellan grid-element */
+  text-align: center; /* Centrerar texten */
 }
 
 h2 {
