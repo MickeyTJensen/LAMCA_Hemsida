@@ -1,0 +1,47 @@
+
+
+/* Exempel på mediefrågor */
+@media (min-width: 2560px) { /* För 4K skärmar */
+  .calendar-container {
+    max-width: 2400px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) { /* För 2K skärmar */
+  .calendar-container {
+    max-width: 1800px;
+  }
+}
+
+@media (max-width: 1024px) { /* För mindre skärmar */
+  .calendar-container {
+    max-width: 100%;
+  }
+}
+
+.full {
+  background-color: #930101 !important; /* Röd */
+}
+
+.available {
+  background-color: #019401 !important; /* Grön */
+}
+
+.fc-event-title {
+  font-size: 14px; /* Justera storleken */
+  text-align: center; /* Centrerar texten */
+  width: 100%; /* Säkerställer att titeln kan centreras i hela bredden */
+}
+
+.fc-event-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrerar innehållet vertikalt */
+  height: 100%; /* Använd full höjd för att möjliggöra vertikal centrering */
+}
+
+/* Justera storleken på andra element */
+.fc-event-instructor, .fc-event-booked, .fc-event-time, .fc-event-id {
+  font-size: 12px; /* Exempel på mindre textstorlek */
+}
+
