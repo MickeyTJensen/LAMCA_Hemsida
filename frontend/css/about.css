@@ -9,7 +9,6 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
@@ -125,15 +124,132 @@ section {
   background: #f09401;
 }
 
-.centered-text {
-  display: flex;
+.whoAreWe {
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Använder hela vyhöjden för att centrera innehållet vertikalt */
-  padding-top: 100px; /* Lägg till toppmarginal om headern döljer innehållet */
+  /*height: 100vh; /* Använder hela vyhöjden för att centrera innehållet vertikalt (ändrat vh för att ha mer margin-bottom)*/
+  padding: 100px 100px; /* Lägg till toppmarginal om headern döljer innehållet */
   color: white; /* Vit textfärg */
   text-align: center;
   font-size: xx-large;
 }
 
+.whoAreWe p {
+  font-size: 16px; 
+  margin: 30px 0 30px 0;
+}
+
+.whoAreWe .moto {
+  font-size: 35px;
+  background: #1e1e1e;
+  padding: 80px;
+  border-radius: 15px;
+}
+
+.whoAreWe .moto span {
+ color:#f09401;
+}
+
+.whoAreWe img { 
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.row img {
+  object-fit: cover;
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+img {
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+.footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5px 5% 0;
+  z-index: 10000;
+  background: #303030;
+  height: 130px;
+}
+
+.footer .logo {
+  font-weight: bolder;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.footer .logo span {
+  color: #f09401;
+}
+
+.footer .navbar a {
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+.footer .navbar a:hover {
+  background: #f09401;
+}
+
+.footer p{
+  color: #fff;
+  margin-top: 5px;
+}
+
+.footer h2{
+  text-align: center;
+  color: #f09401;
+  margin-top: auto;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Delar upp i två kolumner */
+  grid-template-rows: auto; /* Rader baserat på innehållets storlek */
+  grid-gap: 5px; /* Utrymme mellan grid-element */
+  text-align: left; /* Centrerar texten */
+}
+
+h2 {
+  grid-column: 1 / -1; /* Sträcker sig över båda kolumnerna */
+}
+
+.monday, .tuesday, .wednesday {
+  justify-self: start; /* Justerar dessa dagar till vänster */
+}
+
+.thursday, .friday, .saturday {
+  justify-self: left; /* Justerar dessa dagar till höger */
+}
+
+.sunday {
+  grid-column: 1 / -1; /* Centrerar söndagen under båda kolumnerna */
+  justify-self: center; /* Centrerar texten */
+}
+
+.location-grid{
+  text-align: center;
+  display: grid;
+}
 
